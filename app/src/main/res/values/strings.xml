@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">HongBaoTest</string>
+    <string name="app_name">惠杰远程收款</string>
     <string name="hongbao">辅助功能测试</string>
+    <string name="android_version_tips">安卓7.0及以上才能使用该功能，请您手动设置</string>
+    <string name="other_setting">其他通知</string>
+    <string name="auto_setting">当前版本不支持，请手动设置</string>
+    <string name="find">找到相关控件</string>
 </resources>

@@ -1,9 +1,15 @@
-package com.wang.hongbaotest;
+package com.gaozhao.remote;
 
 import android.widget.Toast;
 
 import java.util.Collection;
 
+
+/**
+ * Author by GaoZhao in RemotePayment
+ * Email 18093546728@163.com
+ * https://me.csdn.net/gao511147456
+ */
 public class Utils {
 
     public static void toast(CharSequence cs) {

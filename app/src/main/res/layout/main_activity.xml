@@ -4,12 +4,6 @@
     android:layout_height="match_parent"
     android:background="#fff"
     android:orientation="vertical">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="开启辅助，打开wx聊天界可看到提示，如没有提示或者手势发送失败，请到博客或github上查看解决方案" />
-
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -50,8 +44,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="测试控件" />
-
-    <com.wang.hongbaotest.TouchView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_open_weChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openWeChat"
+            android:text="打开微信" />
+
+        <Button
+            android:id="@+id/bt_open_Alipay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openAlipay"
+            android:text="打开支付宝" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openPhoneNotificationSetting"
+            android:text="一键设置" />
+
+
+    </LinearLayout>
+
+
+    <com.gaozhao.remote.TouchView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/notification_monitor_on_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="付款监控打开" />
+
+    <Button
+        android:id="@+id/notification_monitor_off_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="关闭" />
 </LinearLayout>

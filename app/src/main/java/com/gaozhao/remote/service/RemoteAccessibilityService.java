@@ -1,6 +1,5 @@
-package com.wang.hongbaotest;
+package com.gaozhao.remote.service;
 
-import android.accessibilityservice.AccessibilityService;
 import android.accessibilityservice.GestureDescription;
 import android.graphics.Path;
 import android.support.annotation.NonNull;
@@ -10,45 +9,64 @@ import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 
+import com.gaozhao.remote.AbstractTF;
+import com.gaozhao.remote.Utils;
+
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HongBaoService extends AccessibilityService {
+
+/**
+ * Author by GaoZhao in RemotePayment
+ * Email 18093546728@163.com
+ * https://me.csdn.net/gao511147456
+ * 安卓无障碍开发
+ */
+
+public class RemoteAccessibilityService extends android.accessibilityservice.AccessibilityService {
     private final String TAG = getClass().getName();
 
-    public static HongBaoService mService;
+    public static RemoteAccessibilityService mService;
 
     //初始化
     @Override
     protected void onServiceConnected() {
         super.onServiceConnected();
-        Utils.toast("O(∩_∩)O~~\r\n红包锁定中...");
+        Utils.toast("O(∩_∩)O~~\r\n无障碍打开...");
         mService = this;
     }
 
     //实现辅助功能
     @Override
-    public void onAccessibilityEvent(AccessibilityEvent event) {
-        AccessibilityNodeInfo biaoQingInfo = findFirst(AbstractTF.newContentDescription("表情", true));
-        if (biaoQingInfo != null) {
-            Utils.toast("找到wx的表情图标");//第一次运行可能会吐不出来
-            Log.e(TAG, "onAccessibilityEvent: 找到wx的表情图标");//可以查看日志
-            biaoQingInfo.recycle();
+    public void onAccessibilityEvent(AccessibilityEvent event) {//无障碍
+
+        AccessibilityNodeInfo expressionInfo = findFirst(AbstractTF.newContentDescription("表情", true));
+
+        if (expressionInfo != null) {
+
+            Log.e(TAG,"onAccessibilityEvent: 找到wx的表情图标");
+            expressionInfo.recycle();
+
         }
+
     }
 
     @Override
     public void onInterrupt() {
-        Utils.toast("(；′⌒`)\r\n红包功能被迫中断");
+
+        Utils.toast("Remote payments have been interrupted");
         mService = null;
+
     }
 
     @Override
     public void onDestroy() {
+
         super.onDestroy();
-        Utils.toast("%>_<%\r\n红包功能已关闭");
+        Utils.toast("Remote payment is closed");
         mService = null;
+
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -69,8 +87,8 @@ public class HongBaoService extends AccessibilityService {
      */
     public static boolean clickView(AccessibilityNodeInfo nodeInfo) {
         if (nodeInfo != null) {
-            if (nodeInfo.isClickable()) {
-                nodeInfo.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+            if (nodeInfo.isClickable()) {nodeInfo.performAction(
+                        AccessibilityNodeInfo.ACTION_CLICK);
                 return true;
             } else {
                 AccessibilityNodeInfo parent = nodeInfo.getParent();
@@ -88,14 +106,17 @@ public class HongBaoService extends AccessibilityService {
      * 查找第一个匹配的控件
      *
      * @param tfs 匹配条件，多个AbstractTF是&&的关系，如：
-     *            AbstractTF.newContentDescription("表情", true),AbstractTF.newClassName(AbstractTF.ST_IMAGEVIEW)
-     *            表示描述内容是'表情'并且是imageview的控件
+     * AbstractTF.newContentDescription("表情", true),
+     * AbstractTF.newClassName(AbstractTF.ST_IMAGEVIEW)
+     * 表示描述内容是'表情'并且是imageview的控件
      */
+
     @Nullable
     public AccessibilityNodeInfo findFirst(@NonNull AbstractTF... tfs) {
-        if (tfs.length == 0) throw new InvalidParameterException("AbstractTF不允许传空");
 
+        if (tfs.length == 0) throw new InvalidParameterException("AbstractTF不允许传空");
         AccessibilityNodeInfo rootInfo = getRootInActiveWindow();
+
         if (rootInfo == null) return null;
 
         int idTextTFCount = 0, idTextIndex = 0;
@@ -105,12 +126,18 @@ public class HongBaoService extends AccessibilityService {
                 idTextIndex = i;
             }
         }
+
         switch (idTextTFCount) {
-            case 0://id或text数量为0，直接循环查找
+            case 0:
+
+                //id或text数量为0，直接循环查找
                 AccessibilityNodeInfo returnInfo = findFirstRecursive(rootInfo, tfs);
                 rootInfo.recycle();
                 return returnInfo;
-            case 1://id或text数量为1，先查出对应的id或text，然后再查其他条件
+
+            case 1:
+
+                //id或text数量为1，先查出对应的id或text，然后再查其他条件
                 if (tfs.length == 1) {
                     AccessibilityNodeInfo returnInfo2 = ((AbstractTF.IdTextTF) tfs[idTextIndex]).findFirst(rootInfo);
                     rootInfo.recycle();
@@ -143,7 +170,7 @@ public class HongBaoService extends AccessibilityService {
                     return returnInfo3;
                 }
             default:
-                throw new RuntimeException("由于时间有限，并且多了也没什么用，所以IdTF和TextTF只能有一个");
+                throw new RuntimeException("IdTF和TextTF只能有一个");
         }
         rootInfo.recycle();
         return null;
@@ -153,10 +180,11 @@ public class HongBaoService extends AccessibilityService {
      * @param tfs 由于是递归循环，会忽略IdTF和TextTF
      */
     public static AccessibilityNodeInfo findFirstRecursive(AccessibilityNodeInfo parent, @NonNull AbstractTF... tfs) {
+
         if (parent == null) return null;
         if (tfs.length == 0) throw new InvalidParameterException("AbstractTF不允许传空");
-
         for (int i = 0; i < parent.getChildCount(); i++) {
+
             AccessibilityNodeInfo child = parent.getChild(i);
             if (child == null) continue;
             boolean isOk = true;
@@ -166,8 +194,11 @@ public class HongBaoService extends AccessibilityService {
                     break;
                 }
             }
+
             if (isOk) {
+
                 return child;
+
             } else {
                 AccessibilityNodeInfo childChild = findFirstRecursive(child, tfs);
                 child.recycle();
@@ -193,20 +224,27 @@ public class HongBaoService extends AccessibilityService {
         ArrayList<AccessibilityNodeInfo> list = new ArrayList<>();
         AccessibilityNodeInfo rootInfo = getRootInActiveWindow();
         if (rootInfo == null) return list;
-
         int idTextTFCount = 0, idTextIndex = 0;
+
         for (int i = 0; i < tfs.length; i++) {
             if (tfs[i] instanceof AbstractTF.IdTextTF) {
                 idTextTFCount++;
                 idTextIndex = i;
             }
         }
+
         switch (idTextTFCount) {
-            case 0://id或text数量为0，直接循环查找
+
+            case 0:
+
+                //id或text数量为0，直接循环查找
                 findAllRecursive(list, rootInfo, tfs);
                 break;
-            case 1://id或text数量为1，先查出对应的id或text，然后再循环
-                List<AccessibilityNodeInfo> listIdText = ((AbstractTF.IdTextTF) tfs[idTextIndex]).findAll(rootInfo);
+            case 1:
+
+                //id或text数量为1，先查出对应的id或text，然后再循环
+                List<AccessibilityNodeInfo> listIdText =
+                        ((AbstractTF.IdTextTF) tfs[idTextIndex]).findAll(rootInfo);
                 if (Utils.isEmptyArray(listIdText)) {
                     break;
                 }
@@ -229,9 +267,11 @@ public class HongBaoService extends AccessibilityService {
                     }
                 }
                 break;
+
             default:
-                throw new RuntimeException("由于时间有限，并且多了也没什么用，所以IdTF和TextTF只能有一个");
+                throw new RuntimeException("由dTF和TextTF只能有一个");
         }
+
         rootInfo.recycle();
         return list;
     }
@@ -294,7 +334,9 @@ public class HongBaoService extends AccessibilityService {
         if (Utils.isEmptyArray(listInfo)) return;
 
         for (AccessibilityNodeInfo info : listInfo) {
+
             info.recycle();
+
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.wang.hongbaotest;
+package com.gaozhao.remote;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -11,7 +11,9 @@ import android.view.MotionEvent;
 import android.view.View;
 
 /**
- * Created by cloudplug on 18/4/27.
+ * Author by GaoZhao in RemotePayment
+ * Email 18093546728@163.com
+ * https://me.csdn.net/gao511147456
  * 手指触摸的点
  */
 public class TouchView extends View {
@@ -29,14 +31,18 @@ public class TouchView extends View {
     }
 
     public TouchView(Context context, AttributeSet attrs, int defStyleAttr) {
+
         super(context, attrs, defStyleAttr);
         initData();
+
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public TouchView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+
         super(context, attrs, defStyleAttr, defStyleRes);
         initData();
+
     }
 
     public void initData() {

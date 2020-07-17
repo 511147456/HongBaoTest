@@ -1,12 +1,21 @@
-package com.wang.hongbaotest;
+package com.gaozhao.remote;
 
 import android.graphics.Rect;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.AppCompatCheckBox;
 import android.view.accessibility.AccessibilityNodeInfo;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * Author by GaoZhao in RemotePayment
+ * Email 18093546728@163.com
+ * https://me.csdn.net/gao511147456
+ */
 
 public abstract class AbstractTF<T> {
 
@@ -68,7 +77,7 @@ public abstract class AbstractTF<T> {
 
         @Override
         public boolean checkOk(AccessibilityNodeInfo thisInfo) {
-            return true;//此处不需要实现
+            return true;
         }
 
         @Nullable
@@ -201,10 +210,12 @@ public abstract class AbstractTF<T> {
 
     public static Rect mRecycleRect = new Rect();
 
+
     public static final String ST_VIEW = "android.view.View",
             ST_TEXTVIEW = "android.widget.TextView",
             ST_IMAGEVIEW = "android.widget.ImageView",
             ST_BUTTON = "android.widget.Button",
+            ST_SWITCH = "android.widget.Switch",
             ST_IMAGEBUTTON = "android.widget.ImageButton",
             ST_EDITTEXT = "android.widget.EditText",
             ST_LISTVIEW = "android.widget.ListView",
