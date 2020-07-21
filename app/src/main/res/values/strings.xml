@@ -1,8 +1,25 @@
 <resources>
     <string name="app_name">惠杰远程收款</string>
-    <string name="hongbao">辅助功能测试</string>
     <string name="android_version_tips">安卓7.0及以上才能使用该功能，请您手动设置</string>
     <string name="other_setting">其他通知</string>
     <string name="auto_setting">当前版本不支持，请手动设置</string>
-    <string name="find">找到相关控件</string>
+    <string name="find_widget">找到相关控件</string>
+    <string name="weChatAppName">微信</string>
+    <string name="alipayAppName">支付宝</string>
+    <string name="other_notification">其他通知</string>
+    <string name="new_message_notification">新消息通知</string>
+    <string name="text_notification">通知</string>
+    <string name="me">我</string>
+    <string name="setting">设置</string>
+    <string name="wechat_setting_complete">微信设置完成</string>
+    <string name="error_in_wechat">微信界面分析出错,请手动设置</string>
+    <string name="error_in_alipay">支付宝界面分析出错,请手动设置</string>
+    <string name="my">我的</string>
+    <string name="string_setting">设置</string>
+    <string name="string_common">通用</string>
+    <string name="string_go_set">前往设置</string>
+    <string name="alert_dialog_tip_content">请在相关界面打开电量白名单，后台常驻等后台优化功能，以使得收款助手更稳定的为您服务</string>
+    <string name="optimize_back_task">后台优化</string>
+    <string name="cancel">取消</string>
+    <string name="assist">辅助功能测试</string>
 </resources>

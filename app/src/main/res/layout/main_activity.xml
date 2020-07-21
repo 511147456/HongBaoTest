@@ -1,92 +1,580 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    android:orientation="vertical">
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    android:background="#F7FAFAFB">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/bt_main_ShouShi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="分发手势" />
-
-            <Button
-                android:id="@+id/bt_main_DianJi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="找到'测试控件'并点击" />
-
-            <Button
-                android:id="@+id/bt_main_ChangAn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="长按指定位置" />
-
-            <Button
-                android:id="@+id/bt_main_FanHui"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="执行系统返回键" />
-        </LinearLayout>
-    </HorizontalScrollView>
-
-    <Button
-        android:id="@+id/bt_main_CeShi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="测试控件" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/bt_open_weChat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="openWeChat"
-            android:text="打开微信" />
+        android:background="#fff"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/bt_open_Alipay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="openAlipay"
-            android:text="打开支付宝" />
+        <LinearLayout
 
-        <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="openPhoneNotificationSetting"
-            android:text="一键设置" />
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="#fff"
+            android:orientation="vertical">
 
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="招财猫音响"
+                android:textColor="#3F51B5"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/white_transformation_effect"
+                android:onClick="showWifiConfiguration"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15sp"
+                    android:background="@drawable/ic_wifi" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="蓝牙配网"
+                    android:textColor="#161616"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#D6D6D6"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/white_transformation_effect"
+                android:onClick="showWifiConfiguration"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15sp"
+                    android:background="@drawable/ic_fortune_cat" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="设备管理"
+                    android:textColor="#161616"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#D6D6D6"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="2dp"
+                android:background="@drawable/white_transformation_effect"
+                android:onClick="openPhoneNotificationSetting"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15sp"
+                    android:background="@drawable/ic_automation" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="自动设置手机"
+                    android:textColor="#161616"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/ic_unfinished" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#D6D6D6"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="openWeChat"
+                android:background="@drawable/white_transformation_effect"
+                android:paddingStart="2dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15sp"
+                    android:background="@drawable/ic_wechat" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="设置微信"
+                    android:textColor="#161616"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/ic_unfinished" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#D6D6D6"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="openAlipay"
+                android:background="@drawable/white_transformation_effect"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15sp"
+                    android:background="@drawable/ic_alipay"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="设置支付宝"
+                    android:textColor="#161616"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/ic_unfinished" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="#F7FAFAFB" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-black"
+
+                android:text="辅助功能"
+                android:textColor="#3F51B5"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/notification_monitor_on_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/white_transformation_effect"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15sp"
+                    android:background="@drawable/ic_notification" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="通知使用权"
+                    android:textColor="#161616"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#D6D6D6"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"/>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="automaticStart"
+                android:background="@drawable/white_transformation_effect"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15sp"
+                    android:background="@drawable/ic_auto_start" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="开机启动"
+                    android:textColor="#161616"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#D6D6D6"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"/>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="3dp"
+                android:onClick="showBackgroundOptimizeWay"
+                android:background="@drawable/white_transformation_effect"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15sp"
+                    android:background="@drawable/ic_running_backstage"
+                     />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="后台优化"
+                    android:textColor="#161616"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#D6D6D6"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"/>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="3dp"
+                android:onClick="showSelfDefinedPush"
+                android:background="@drawable/white_transformation_effect"
+                android:orientation="horizontal">
+
+                <ImageView
+
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15sp"
+                    android:background="@drawable/ic_push"
+                    />
+
+                <TextView
+
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="自定义推送"
+                    android:textColor="#161616"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="#F7FAFAFB" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="更多"
+                android:textColor="#3F51B5"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="4dp"
+                android:background="@drawable/white_transformation_effect"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15sp"
+                    android:background="@drawable/ic_question" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="疑难问题"
+                    android:textColor="#161616"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#D6D6D6"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="4dp"
+                android:background="@drawable/white_transformation_effect"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15sp"
+                    android:background="@drawable/ic_instructions" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="使用说明"
+                    android:textColor="#161616"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#D6D6D6"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"/>
+
+            <LinearLayout
+                android:id="@+id/notification_monitor_off_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/white_transformation_effect"
+                android:paddingStart="2dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15sp"
+                    android:background="@drawable/ic_switch" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="关闭后台"
+                    android:textColor="#161616"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/bt_main_ShouShi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分发手势" />
+
+                    <Button
+
+                        android:id="@+id/bt_main_DianJi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="找到‘测试控件'并点击" />
+
+                    <Button
+
+                        android:id="@+id/bt_main_ChangAn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="长按指定位置" />
+
+                    <Button
+                        android:id="@+id/bt_main_CeShi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="测试控件" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <com.gaozhao.remote.TouchView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
     </LinearLayout>
-
-
-    <com.gaozhao.remote.TouchView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
-    <Button
-        android:id="@+id/notification_monitor_on_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="付款监控打开" />
-
-    <Button
-        android:id="@+id/notification_monitor_off_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="关闭" />
-</LinearLayout>
+</ScrollView>

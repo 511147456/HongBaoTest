@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.view.accessibility.AccessibilityNodeInfo;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
@@ -211,6 +212,8 @@ public abstract class AbstractTF<T> {
     public static Rect mRecycleRect = new Rect();
 
 
+
+
     public static final String ST_VIEW = "android.view.View",
             ST_TEXTVIEW = "android.widget.TextView",
             ST_IMAGEVIEW = "android.widget.ImageView",
@@ -221,7 +224,8 @@ public abstract class AbstractTF<T> {
             ST_LISTVIEW = "android.widget.ListView",
             ST_LINEARLAYOUT = "android.widget.LinearLayout",
             ST_VIEWGROUP = "android.view.ViewGroup",
-            ST_SYSTEMUI = "com.android.systemui";
+            ST_SYSTEMUI = "com.android.systemui",
+            ST_CHECKBOX = "android.widget.CheckBox";
 
     /**
      * 找id，就是findAccessibilityNodeInfosByViewId方法

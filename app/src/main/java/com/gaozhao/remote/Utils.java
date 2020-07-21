@@ -13,7 +13,7 @@ import java.util.Collection;
 public class Utils {
 
     public static void toast(CharSequence cs) {
-        Toast.makeText(MyApp.mApp, cs, Toast.LENGTH_SHORT).show();
+        Toast.makeText(RemotePaymentApplication.remotePaymentApplication, cs, Toast.LENGTH_SHORT).show();
     }
 
     //集合是否是空的

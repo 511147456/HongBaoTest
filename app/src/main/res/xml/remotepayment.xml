@@ -6,6 +6,6 @@
     android:accessibilityFlags="flagReportViewIds|flagRetrieveInteractiveWindows"
     android:canPerformGestures="true"
     android:canRetrieveWindowContent="true"
-    android:description="@string/hongbao"
+    android:description="@string/assist"
     android:notificationTimeout="100"
     />

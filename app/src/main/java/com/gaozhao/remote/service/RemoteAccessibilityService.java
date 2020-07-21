@@ -188,6 +188,7 @@ public class RemoteAccessibilityService extends android.accessibilityservice.Acc
             AccessibilityNodeInfo child = parent.getChild(i);
             if (child == null) continue;
             boolean isOk = true;
+
             for (AbstractTF tf : tfs) {
                 if (!tf.checkOk(child)) {
                     isOk = false;
@@ -200,6 +201,7 @@ public class RemoteAccessibilityService extends android.accessibilityservice.Acc
                 return child;
 
             } else {
+
                 AccessibilityNodeInfo childChild = findFirstRecursive(child, tfs);
                 child.recycle();
                 if (childChild != null) {
@@ -331,12 +333,15 @@ public class RemoteAccessibilityService extends android.accessibilityservice.Acc
      * 由于太多,最好回收这些AccessibilityNodeInfo
      */
     public static void recycleAccessibilityNodeInfo(List<AccessibilityNodeInfo> listInfo) {
-        if (Utils.isEmptyArray(listInfo)) return;
 
+        if (Utils.isEmptyArray(listInfo)) return;
         for (AccessibilityNodeInfo info : listInfo) {
 
             info.recycle();
 
         }
+
     }
+
+
 }

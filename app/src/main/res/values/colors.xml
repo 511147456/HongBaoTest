@@ -30,8 +30,8 @@
     <color name="black">#000000</color>
     <color name="click_color">#e4e9ea</color>
     <color name="lt_white_4">#FFFFFF</color>
-    <color name="colorPrimary">#FFC600</color>
-    <color name="colorPrimaryDark">#FFC600</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#DDF9FF</color>
 
     <color name="black_overlay">#66000000</color>
@@ -110,4 +110,5 @@
     <color name="bowen_color_blue_deep">#2A3EBD</color>
     <color name="gaozhao_yellow">#FFEB3B</color>
     <color name="gaozhao_yellow2">#1983EC</color>
+    <color name="white_light">#ECECEC</color>
 </resources>
