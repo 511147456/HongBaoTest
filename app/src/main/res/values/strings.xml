@@ -7,7 +7,9 @@
     <string name="weChatAppName">微信</string>
     <string name="alipayAppName">支付宝</string>
     <string name="other_notification">其他通知</string>
-    <string name="new_message_notification">新消息通知</string>
+    <string name="new_message_notification">新消息提醒</string>
+    <string name="new_message_inform">新消息通知</string>
+    <string name="new_message_system_notification">新消息系统通知</string>
     <string name="text_notification">通知</string>
     <string name="me">我</string>
     <string name="setting">设置</string>
@@ -22,4 +24,69 @@
     <string name="optimize_back_task">后台优化</string>
     <string name="cancel">取消</string>
     <string name="assist">辅助功能测试</string>
+
+
+    <string name="devicedetail_properties">属性列表</string>
+    <string name="devicedetail_propertynamedesc">属性名:</string>
+    <string name="devicedetail_propertyvaluedesc">属性值:</string>
+    <string name="devicedetail_services">方法列表</string>
+    <string name="devicedetail_servicenamedesc">服务名:</string>
+    <string name="devicedetail_events">事件列表</string>
+    <string name="devicedetail_eventnamedesc">事件名:</string>
+    <string name="devicedetail_eventisscribe">是否订阅:</string>
+    <string name="devicedetail_editnamedesc">名称:</string>
+    <string name="devicedetail_editvaluedesc">取值:</string>
+    <string name="devicedetail_edit_hintdesc">请填写值</string>
+    <string name="devicedetail_edit_confirm">确认</string>
+    <string name="devicedetail_edit_cancel">取消</string>
+
+
+    <string name="eventlist_events">事件列表</string>
+    <string name="eventlist_eventname">事件名：</string>
+    <string name="eventlist_eventargname">事件参数名：</string>
+    <string name="eventlist_eventargvalue">事件参数值：</string>
+
+    <string name="cloudapitest_gettsl">获取tsl</string>
+    <string name="cloudapitest_getkeytoken">获取accesskeytoken</string>
+    <string name="cloudapitest_getkeyprefix">获取accesskeyprefix</string>
+    <string name="cloudapitest_createteam">创建分组</string>
+    <string name="cloudapitest_deleteteam">删除分组</string>
+    <string name="cloudapitest_addtoteam">添加到分组</string>
+    <string name="cloudapitest_deletefromteam">从分组删除</string>
+
+    <string name="shi">是</string>
+    <string name="fou">否</string>
+    <string name="back_press">后退</string>
+    <string name="setallproperty_test"> 设置所有属性 </string>
+    <string name="sub_event_test">订阅所有事件</string>
+    <string name="press_test">压测</string>
+    <string name="null_string">NULL</string>
+
+
+    <string name="control_pannel_device_name"> 设备类型：%1$s </string>
+    <string name="control_pannel_hint"> 参照下方输入示例 </string>
+    <string name="control_pannel_data_format"> 测试输入示例：
+        \n int: 1 \n boolean:0
+        \n struct:{\"key\":\"val\"} \n array:[1,2,3]
+        \n array[struct]:[{1,2,3}, {4,5,6}]
+        \n double/float: 1.2
+        \n text: xxxxx
+    </string>
+    <string name="string_operational_problem_4">1.请确保内容充盈，清理无关应用\n 2.请确保微信、支付宝在后台常驻运行\n 3.排查手机端问题后还要检查招财猫电量是否充足，网络是否正常\n 4.部分低版本安卓手机请在相关设置中打开休眠时始终保持网络连接\n</string>
+    <string name="string_operational_problem_3"><![CDATA[1.请依次进入设置>应用>惠杰远程收款>应用管理，然后打开允许开机启动、打开耗电保护、允许后台运行\n 2.华为手机：找到本APP应用启动管理设置界面，分别设置“允许自启动”、“允许关联启动”、“允许后台启动”\n 3.OPPO手机：设置>电池>应用速冻>收款助手APP>关闭全部选项\n 4.其他：打开耗电保护，关闭锁屏清除应用，无线和网络始终允许\n]]></string>
+    <string name="string_operational_problem_2"><![CDATA[1.微信主界面不能在屏显状态，尤其是收款时\n 2.微信不能登陆电脑端\n 3. 微信>设置>新消息提醒>打开提醒\n 4.进入微信收款详情，打开语音提醒功能\n]]></string>
+    <string name="string_operational_problem_1">1.请检查您的wifi密码是否正确\n 2.您的手机热点是否2.4G网络\n 3.您的手机蓝牙是否正常\n</string>
+    <string name="string_operational_explain_1">1.手机蓝牙、定位、网络(支持WIFI但不支持GPRS)等功能需要打开\n 2.目前不支持5G频段\n 3.招财猫音响处于配网模式\n 4.配网键有wifi标识</string>
+    <string name="string_operational_explain_2">1.您的手机是HUAWEI、小米、OPPO、VIVO、魅族、一加、三星等主流手机且安卓系统版本至少7.0以上才能使用自动设置功能\n2.如果您的手机安卓版本较低请按如下方式完成配置</string>
+    <string name="string_operational_explain_3">2.1打开手机设置，找到通知使用权，并开启\n 2.2找到应用管理，打开全部相关设置开关\n 2.3打开微信和支付宝，允许新消息通知\n</string>
+
+    <string name="string_collect_money_acount">收钱到账语音提醒</string>
+    <string name="string_auto_setting">自动设置</string>
+    <string name="string_manual_setting">手动设置</string>
+    <string name="string_set_wechat">设置微信</string>
+    <string name="string_set_alipay">设置支付宝</string>
+    <string name="Please_select_the_setting_mode_according_to_the_mobile_version_and_open_it">请您根据手机版本选择设置方式,需要打开</string>
+    <string name="wechat">微信</string>
+    <string name="alipay">支付宝</string>
+    <string name="collection_notification_function">的收款通知功能</string>
 </resources>

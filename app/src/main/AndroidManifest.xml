@@ -1,21 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.gaozhao.remote">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gaozhao.remote">
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
     <application
+        tools:replace="android:allowBackup"
         android:name="com.gaozhao.remote.RemotePaymentApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true">
+
         <activity android:name="com.gaozhao.remote.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".aliyun.alink.devicesdk.demo.AliyunIotActivity" />
+
+        <activity
+            android:name=".aliyun.alink.devicesdk.demo.ControlPannelActivity"
+            android:exported="true">
+        </activity>
+
+
+        <activity android:name=".aliyun.alink.devicesdk.demo.LabelActivity"/>
+        <activity android:name=".aliyun.alink.devicesdk.demo.COTAActivity"/>
+        <activity android:name=".aliyun.alink.devicesdk.demo.ShadowActivity"/>
+        <activity android:name=".aliyun.alink.devicesdk.demo.OTAActivity"/>
+        <activity android:name=".aliyun.alink.devicesdk.demo.GatewayActivity" />
+        <activity android:name=".aliyun.alink.devicesdk.demo.H2FileManagerActivity" />
+        <activity android:name=".aliyun.alink.devicesdk.demo.MqttActivity" />
+        <activity android:name=".aliyun.alink.devicesdk.demo.LogPushActivity" />
+        <activity android:name=".operation.activity.QuestionsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop"/>
+        <activity android:name=".operation.activity.ExplainActivity" />
+
+        <!--http://lazybios.com/2016/12/install-apk-by-intent-compatible-adnroid-n/ -->
+        <provider
+            android:name=".aliyun.alink.devicesdk.demo.FileProvider"
+            android:authorities="com.aliyun.alink.devicesdk.demo.auth_fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+
+        </provider>
+
         <service
             android:name="com.gaozhao.remote.service.RemoteAccessibilityService"
             android:enabled="true"

@@ -22,14 +22,14 @@ public class RemotePaymentBaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Window window = getWindow();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
 
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(getResources().getColor(R.color.white));
             if (Build.VERSION.SDK_INT != Build.VERSION_CODES.Q && !RomUtil.isMiui()) {
-                window.setNavigationBarColor(getResources().getColor(R.color.lt_white_11));
-            }
+                window.setNavigationBarColor(getResources().getColor(R.color.lt_white_11)); }
             StatusBarColorUtil.setStatusBarLightMode(window);
+
         }
     }
 }

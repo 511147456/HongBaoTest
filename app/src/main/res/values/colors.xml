@@ -33,7 +33,6 @@
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#DDF9FF</color>
-
     <color name="black_overlay">#66000000</color>
 
     <color name="divider_bg">#d7d7db</color>
@@ -46,56 +45,15 @@
     <color name="font_yellow_2">#F89609</color>
     <color name="font_white">#FFFFFF</color>
     <color name="font_grey">#FF888888</color>
-
     <color name="font_title_color">#333333</color>
-
     <color name="control_bg">#F5F5F5</color>
     <color name="nav_check_font_color">#FF97A5</color>
-
     <color name="separator_blue">#36C1F5</color>
     <color name="separator_pink">#C073E7</color>
-
     <color name="music_background">#3C5F78</color>
     <color name="music_font_colorAccent">#DDF9FF</color>
-
     <color name="colorControlActivated">#7AFFFFFF</color>
     <color name="colorControlHighlight">#7AFFFFFF</color>
-
-    <!-- Theme - Dark Blue -->
-    <color name="mp.theme.dark_blue.background">#3C5F78</color>
-    <color name="mp.theme.dark_blue.gradientColor">#507E9F</color>
-    <color name="mp.theme.dark_blue.colorControlActivated">#7AFFFFFF</color>
-    <color name="mp.theme.dark_blue.colorControlHighlight">#7AFFFFFF</color>
-
-    <color name="mp.theme.dark_blue.colorPrimary">#3C5F78</color>
-    <color name="mp.theme.dark_blue.colorPrimaryDark">#3C5F78</color>
-    <color name="mp.theme.dark_blue.colorAccent">#DDF9FF</color>
-    <color name="mp.theme.dark_blue.textColorPrimary">#DDF9FF</color>
-    <color name="mp.theme.dark_blue.textColorSecondary">#3C5F78</color>
-
-    <color name="mp.theme.dark_blue.actionMode.statusBarColor">#9CBDCC</color>
-    <color name="mp.theme.dark_blue.actionMode.background">#9CBDCC</color>
-
-    <color name="mp.line">#3DDDF9FF</color>
-    <color name="mp.list.background">#1ADDF9FF</color>
-    <color name="mp.list.background.selected">#6CDDF9FF</color>
-    <color name="mp.list.scrollThumb">#99DDF9FF</color>
-    <color name="mp.list.text.title">#DDF9FF</color>
-    <color name="mp.list.text.title.selected">#3C5F78</color>
-    <color name="mp.list.text.hint">#9CBDCC</color>
-    <color name="mp.list.text.hint.selected">#7C3C5F78</color>
-
-    <color name="mp.popupMenu.background">#B4D2E0</color>
-
-    <color name="mp.text.hint">#9CBDCC</color>
-
-    <!-- Segmented Control -->
-    <color name="mp.widget.segmented.default">?attr/colorAccent</color>
-    <color name="mp.widget.segmented.checked">#3C5F78</color>
-
-    <!-- CharacterView -->
-    <color name="mp.characterView.background">#9CBDCC</color>
-    <color name="mp.characterView.textColor">@color/mp.list.text.title</color>
 
     <color name="transparent_background">#31000000</color>
     <color name="black_4a4a4a">#4A4A4A</color>
@@ -111,4 +69,6 @@
     <color name="gaozhao_yellow">#FFEB3B</color>
     <color name="gaozhao_yellow2">#1983EC</color>
     <color name="white_light">#ECECEC</color>
+
+    <color name="red">#FF0000</color>
 </resources>
